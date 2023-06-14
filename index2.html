@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John's Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/20b027e177.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Logo (2).png" class="logo" height="200px" width="800">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>WeCanCodeIt: Software Developer</p>
+            <h1>Hi, I'm <span>John Waiters</span><br>from Massachusetts. </h1>
+        </div>
+    </div>
+</div>
+
+// About
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="profile picture.png" >
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, architecto a dolores aspernatur quas porro accusantium. Est aliquid sit illo velit inventore tenetur, sapiente, debitis similique nobis facilis, ipsum non?</p>
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('skills')">Skills</p>
+            </div>
+            <div class="tab-contents active-tab" id="education">
+                <ul>
+                    <li><span>Current</span><br>Student</li>
+                    <li><span>2020 - Current</span><br>Gulford Technical Community College</li>
+                    <li><span>2008</span><br>Cambridge Rindge and Latin High School</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>2023 - Current</span><br>Student</li>
+                    <li><span>2021 - Current</span><br>U.S. Army</li>
+                    <li><span></span><br></li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="skills">
+                <ul>
+                    <li><span>WeCanCodeIt</span><br>Designing Web/App interfaces</li>
+                    <li><span>Web Development</span><br>Web app Development</li>
+                    <li><span>App Development</span><br>Java Specialist</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+// Services
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque obcaecati aliquam quas laborum nemo! Nostrum ad quo, dolore quam, obcaecati numquam excepturi tenetur officia minus iusto voluptas voluptatem, consectetur quaerat.</p>
+            <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-cloud"></i>
+                <h2> Cloud Developer</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque obcaecati aliquam quas laborum nemo! Nostrum ad quo, dolore quam, obcaecati numquam excepturi tenetur officia minus iusto voluptas voluptatem, consectetur quaerat.</p>
+            <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque obcaecati aliquam quas laborum nemo! Nostrum ad quo, dolore quam, obcaecati numquam excepturi tenetur officia minus iusto voluptas voluptatem, consectetur quaerat.</p>
+            <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+</script>
+
+</body>
+</html>
