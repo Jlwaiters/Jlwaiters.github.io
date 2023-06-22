@@ -301,7 +301,7 @@ nav ul li a:hover::after {
 .contact-left p i {
     color: #aa7e05fd;
     margin-right: 15px;
-    font-size: 25px;
+    font-size: 24px;
 }
 
 .social-icons {
@@ -438,7 +438,7 @@ nav .fa-solid {
     }
 }
 #msg{
-    color: #61b752;
+    color: #5c0685;
     margin-top: -40px;
     display: block;
 }
